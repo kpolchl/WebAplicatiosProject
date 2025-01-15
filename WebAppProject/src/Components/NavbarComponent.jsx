@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 function NavbarComponent() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary" style={{padding: 20 }}>
       <Container fluid>
         <Navbar.Brand as={Link} to="/">WebAppStore</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
