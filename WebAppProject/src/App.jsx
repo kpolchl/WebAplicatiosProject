@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavbarComponent from './Components/NavbarComponent';
 import Home from './Pages/Home';
@@ -6,8 +6,8 @@ import Products from './Pages/Products';
 import './App.css';
 import Categories from './Pages/Categories';
 import MyAccount from './Pages/MyAccount';
-import Cart from './Pages/Cart';
-import LoginPage from './Pages/LoginPage';
+import Cart from './Pages/Cart.jsx';
+import LoginPage from './Pages/LoginPage.jsx';
 
 function App() {
   return (
