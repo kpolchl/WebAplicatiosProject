@@ -10,34 +10,34 @@ function CarouselComponent() {
           <Carousel.Item>
             <ExampleCarouselImage 
               text="First slide" 
-              imageUrl="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"  // Link do przykładowego obrazu
+              imageUrl="https://images.pexels.com/photos/5699008/pexels-photo-5699008.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"  // Link do przykładowego obrazu
             />
             <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3 style={{border: "15 solid"}}><strong>Moda</strong></h3>
+              <p>Zapoznaj sie z najnowszymi ubraniami z kolekcji</p>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
             <ExampleCarouselImage 
               text="Second slide" 
-              imageUrl="https://img.freepik.com/premium-photo/most-amazing-realistic-hd-8k-wallpaper-stock-photographic-image_915071-51074.jpg"  // Link do przykładowego obrazu
+              imageUrl="https://images.pexels.com/photos/1191531/pexels-photo-1191531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"  // Link do przykładowego obrazu
             />
             <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h3>Biżuteria</h3>
+              <p>Wyróżnij się z nową biżuterią</p>
             </Carousel.Caption>
           </Carousel.Item>
 
           <Carousel.Item>
             <ExampleCarouselImage 
               text="Third slide" 
-              imageUrl="https://imageupscaler.com/wp-content/uploads/2024/07/deblured-cutty-fox.jpg"  // Link do przykładowego obrazu
+              imageUrl="https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"  // Link do przykładowego obrazu
             />
             <Carousel.Caption>
-              <h3>Third slide label</h3>
+              <h3>Elektornika</h3>
               <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                Najnowszy sprzęt elektroniczny
               </p>
             </Carousel.Caption>
           </Carousel.Item>
