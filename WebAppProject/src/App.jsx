@@ -4,24 +4,32 @@ import NavbarComponent from './Components/NavbarComponent';
 import Home from './Pages/Home';
 import Products from './Pages/Products';
 import './App.css';
-import Categories from './Pages/Categories';
+import Contact from './Pages/Contact'
 import MyAccount from './Pages/MyAccount';
 import Cart from './Pages/Cart';
 import LoginPage from './Pages/LoginPage';
+import ProductPage from './Pages/ProductPage';
+import { CartProvider } from './Context/CartContext';
+import { ProductProvider } from './Context/ProductContext';
 
 function App() {
   return (
-    <BrowserRouter>
-      <NavbarComponent />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/Categories" element={<Categories />} />
-        <Route path="/MyAccount" element={<MyAccount />} />
-        <Route path="/Cart" element={<Cart />} />
-        <Route path="/LoginPage" element={<LoginPage />} />
-      </Routes>
-    </BrowserRouter>
+    <ProductProvider>
+      <CartProvider>
+        <BrowserRouter>
+          <NavbarComponent />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/myaccount" element={<MyAccount />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/loginpage" element={<LoginPage />} />
+            <Route path="/product/:title" element={<ProductPage />} />
+          </Routes>
+        </BrowserRouter>
+      </CartProvider>
+    </ProductProvider>
   );
 }
 
