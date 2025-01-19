@@ -1,6 +1,6 @@
-import React from 'react'; 
+import 'react'; 
 import { useCart } from '../Context/CartContext';
-import '../StyleSheets/cart.css';
+// import '../StyleSheets/cart.css';
 
 function Cart() {
   const { cart, setCart } = useCart(); // Pobranie koszyka i funkcji do aktualizacji koszyka
