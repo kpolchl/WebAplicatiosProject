@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Card, Image, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
-import OrderList from "../Components/OrderList.jsx"; // Assuming this is the correct import path
+import OrderList from "../Components/OrderList.jsx";
+import OrderCard from "../Components/OrderCard.jsx"; // Assuming this is the correct import path
 
 function MyAccount() {
   const [user, setUser] = useState(null);
@@ -15,6 +16,7 @@ function MyAccount() {
       setUser(JSON.parse(getUser)); // Parse and set the user object
     }
     getUserHistory(); // Fetch user orders from the server
+    console.log(userOrders);
   }, []);
 
   const getUserHistory = async () => {
@@ -27,7 +29,6 @@ function MyAccount() {
       console.error("Error fetching user orders:", error);
     }
   };
-
 
   // Show loading message if user data is not available yet
   if (!user) {
@@ -59,13 +60,6 @@ function MyAccount() {
               <Card.Text style={{ color: "gray", fontSize: "1rem" }}>
                 {user.email}
               </Card.Text>
-              <Button
-                variant="primary"
-                style={{ borderRadius: "20px", padding: "10px 20px" }}
-                onClick={() => alert("Profile editing coming soon!")}
-              >
-                Edit Profile
-              </Button>
             </Col>
           </Row>
         </Card.Body>
@@ -74,7 +68,7 @@ function MyAccount() {
       {/* User Orders */}
       <div className="mt-5 w-100">
         <h3>Your Orders</h3>
-        <OrderList orders={userOrders} /> {/* Pass the fetched user orders to OrderList */}
+        <OrderList orders={userOrders} />
       </div>
     </Container>
   );

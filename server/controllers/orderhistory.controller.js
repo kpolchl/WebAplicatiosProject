@@ -13,7 +13,7 @@ const getOrderHistories = async (req, res) => {
 const getUserOrderHistory = async (req, res) => {
   try {
     const {userId} = req.body;
-    const orders = await OrderHistory.findOne({userId});
+    const orders = await OrderHistory.find({userId});
     res.status(200).json(orders);
   } catch (error) {
     res.status(500).json({ message: error.message });

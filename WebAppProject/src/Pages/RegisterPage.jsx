@@ -142,6 +142,7 @@ const RegisterPage = () => {
               }}
             >
               Zarejestruj się
+
             </Button>
           </div>
         </Form>
