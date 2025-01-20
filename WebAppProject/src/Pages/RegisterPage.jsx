@@ -18,7 +18,7 @@ const RegisterPage = () => {
       email: email,
       password: password,
     })
-    alert("zalogowano")
+    alert("zarejestrowano")
     navigate('/');
   };
 

@@ -22,7 +22,8 @@ function MyAccount() {
   const getUserHistory = async () => {
     try {
       const userId = JSON.parse(localStorage.getItem("user"))._id; // Assuming userId is stored in the 'user' object in localStorage
-      const response = await axios.post("http://localhost:3000/orders/user", { userId: userId });
+      console.log(userId);
+      const response = await axios.get("http://localhost:3000/orders/user", { userId: userId });
       setUserOrders(response.data); // Set user orders
     } catch (error) {
       console.error("Error fetching user orders:", error);

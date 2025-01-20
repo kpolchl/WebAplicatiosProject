@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get("/" , getOrderHistories);
 
-router.post("/user", getUserOrderHistory);
+router.get("/user", getUserOrderHistory);
 
 router.post("/cart", createOrder);
 
