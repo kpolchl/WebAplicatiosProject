@@ -5,14 +5,14 @@ import {useEffect, useState} from "react";
 // import '../StyleSheets/cart.css';
 
 function Cart() {
-  const { cart, setCart } = useCart(); // Pobranie koszyka i funkcji do aktualizacji koszyka
+  const { cart, setCart } = useCart();
   const [userId, setUserId] = useState('');
 
   useEffect(() => {
     let getUser = localStorage.getItem("user");
     if (getUser) {
       const parsedUser = JSON.parse(getUser);
-      setUserId(parsedUser._id); // Set the user ID to state
+      setUserId(parsedUser._id); 
     }
   },[])
 
@@ -23,7 +23,7 @@ function Cart() {
     setCart(updatedCart);
   };
 
-  // Obliczanie całkowitej wartości koszyka
+
   const calculateTotal = () => {
     return cart.reduce((total, product) => total + product.price, 0).toFixed(2);
   };
@@ -51,7 +51,7 @@ function Cart() {
 
   return (
     <div style={{ margin: "80px 50px", display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
-      {/* Sekcja produktów */}
+
       <div style={{ flex: 2, minWidth: '60%' }}>
         <h1>Koszyk</h1>
         <br />
@@ -69,7 +69,7 @@ function Cart() {
                 alignItems: 'center',
               }}
             >
-              {/* Obrazek produktu po lewej stronie */}
+             
               <div style={{ width: '200px', height: '200px', marginRight: '20px' }}>
                 <img
                   src={product.image}
@@ -83,12 +83,12 @@ function Cart() {
                 />
               </div>
 
-              {/* Treść produktu obok obrazka */}
+            
               <div style={{ flex: 1 }}>
                 <h3>{product.title}</h3>
                 <p><strong>Kategoria:</strong> {product.category}</p>
                 <p><strong>Cena:</strong> ${product.price.toFixed(2)}</p>
-                {/* Przycisk do usuwania produktu */}
+                
                 <button
                   onClick={() => handleRemoveFromCart(product)}
                   style={{
@@ -108,7 +108,7 @@ function Cart() {
         )}
       </div>
 
-      {/* Sekcja z całkowitą wartością koszyka */}
+    
       <div
         className="cart-summary"
         style={{

@@ -8,8 +8,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 function NavbarComponent() {
-  const [searchQuery, setSearchQuery] = useState(''); // Przechowuje tekst wyszukiwania
-  const navigate = useNavigate(); // Hook do nawigacji
+  const [searchQuery, setSearchQuery] = useState(''); 
+  const navigate = useNavigate();
 
   // Funkcja obsługująca wyszukiwanie
   const handleSearch = (e) => {

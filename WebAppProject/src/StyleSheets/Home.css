@@ -1,19 +1,19 @@
 .horizontal-scroll {
-    display: flex; /* Ustaw elementy w poziomie */
-    gap: 20px; /* Odstęp między kartami */
-    overflow-x: auto; /* Aktywuj przewijanie w poziomie */
-    overflow-y: hidden; /* Wyłącz przewijanie w pionie */
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; 
+    overflow-y: hidden; 
     padding: 10px;
-    scroll-behavior: smooth; /* Płynne przewijanie */
+    scroll-behavior: smooth; 
   }
   
   .horizontal-scroll::-webkit-scrollbar {
-    height: 8px; /* Ustaw wysokość paska przewijania */
+    height: 8px;
   }
   
   .horizontal-scroll::-webkit-scrollbar-thumb {
     background-color: #ccc; /* Kolor uchwytu przewijania */
-    border-radius: 4px; /* Zaokrąglenie uchwytu */
+    border-radius: 4px; 
   }
   
   .horizontal-scroll::-webkit-scrollbar-track {

@@ -1,5 +1,5 @@
 .carousel-container {
-  max-width: 800px; /* Maksymalna szerokość karuzeli */
-  max-height: 500px;/* Wyśrodkowanie karuzeli */
+  max-width: 800px;
+  max-height: 500px;
   padding: 35px
 }

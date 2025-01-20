@@ -3,34 +3,33 @@ import { Container, Row, Col, Card, Image, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import OrderList from "../Components/OrderList.jsx";
-import OrderCard from "../Components/OrderCard.jsx"; // Assuming this is the correct import path
+import OrderCard from "../Components/OrderCard.jsx"; 
 
 function MyAccount() {
   const [user, setUser] = useState(null);
   const [userOrders, setUserOrders] = useState([]);
 
-  // Fetch user profile and order history on component mount
   useEffect(() => {
     const getUser = localStorage.getItem("user");
     if (getUser) {
-      setUser(JSON.parse(getUser)); // Parse and set the user object
+      setUser(JSON.parse(getUser));
     }
-    getUserHistory(); // Fetch user orders from the server
+    getUserHistory(); 
     console.log(userOrders);
   }, []);
 
   const getUserHistory = async () => {
     try {
-      const userId = JSON.parse(localStorage.getItem("user"))._id; // Assuming userId is stored in the 'user' object in localStorage
+      const userId = JSON.parse(localStorage.getItem("user"))._id; 
       console.log(userId);
       const response = await axios.get("http://localhost:3000/orders/user", { userId: userId });
-      setUserOrders(response.data); // Set user orders
+      setUserOrders(response.data);
     } catch (error) {
       console.error("Error fetching user orders:", error);
     }
   };
 
-  // Show loading message if user data is not available yet
+
   if (!user) {
     return (
       <Container className="text-center mt-5">

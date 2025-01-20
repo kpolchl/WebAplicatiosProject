@@ -11,7 +11,7 @@ function CardComponent({title, price, description, image, category, rating }) {
       style={{ width: '60%', margin: '10px' }} 
       className="d-flex flex-column flex-md-row align-items-center"
     >
-      {/* Obraz po lewej stronie */}
+      
       <div 
         style={{
           border: '2px solid rgba(32, 109, 205, 0.8)',
@@ -33,7 +33,7 @@ function CardComponent({title, price, description, image, category, rating }) {
           }} 
         />
       </div>
-      {/* Treść po prawej stronie */}
+    
       <div 
         className="text-center text-md-start"
         style={{ 

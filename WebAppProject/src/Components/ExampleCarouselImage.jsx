@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';  // Opcjonalnie - do walidacji propsów
+import PropTypes from 'prop-types'; 
 
 function ExampleCarouselImage({ text, imageUrl }) {
   return (

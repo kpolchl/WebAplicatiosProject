@@ -29,16 +29,16 @@ const LoginPage = () => {
       setError('Nieprawidłowy e-mail lub hasło.');
       return;
     }
-    // Check if the password matches (assuming plain-text passwords, not recommended)
+   
     if (user.password !== password) {
       setError('Nieprawidłowy e-mail lub hasło.');
       return;
     }
 
-    // Store the logged-in user's data in localStorage
+    
     localStorage.setItem('user', JSON.stringify(user));
 
-    // Clear the form and error
+    
     setEmail('');
     setPassword('');
     setError('');
@@ -52,7 +52,7 @@ const LoginPage = () => {
         <Col md={6}>
           <h2 className="text-center mb-4">Logowanie</h2>
 
-          {error && <Alert variant="danger">{error}</Alert>} {/* Show error if there's any */}
+          {error && <Alert variant="danger">{error}</Alert>} 
 
           <Form onSubmit={handleLogin}>
             <Form.Group className="mb-3" controlId="formBasicEmail">

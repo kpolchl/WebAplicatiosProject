@@ -7,7 +7,7 @@ import { useCart } from '../Context/CartContext';
 
 function ProductPageComponent({ image, title, category, price, description, rating }) {
 
-  const { addToCart } = useCart(); // Pobierz funkcję dodawania do koszyka
+  const { addToCart } = useCart(); 
 
   const handleAddToCart = () => {
     const product = { title, category, price, image, rating };
@@ -18,7 +18,7 @@ function ProductPageComponent({ image, title, category, price, description, rati
   return (
     <Container style={{ marginTop: '50px' }}>
       <Row className="align-items-center">
-        {/* Obraz po lewej stronie */}
+        
         <Col md={6} className="text-center">
           <img 
             src={image} 
@@ -33,7 +33,6 @@ function ProductPageComponent({ image, title, category, price, description, rati
           />
         </Col>
 
-        {/* Szczegóły produktu po prawej stronie */}
         <Col md={6}>
           <h1>{title}</h1>
           <h4>Kategoria: {category}</h4>

@@ -1,9 +1,9 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 
-// Tworzenie kontekstu
+
 const CartContext = createContext();
 
-export const useCart = () => useContext(CartContext); // Hook do łatwego używania koszyka
+export const useCart = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState(() => {
@@ -16,7 +16,7 @@ export const CartProvider = ({ children }) => {
   const addToCart = (product) => {
     setCart((prevCart) => {
       const updatedCart = [...prevCart, product];
-      localStorage.setItem('cart', JSON.stringify(updatedCart)); // Zapisz koszyk w localStorage
+      localStorage.setItem('cart', JSON.stringify(updatedCart)); 
       return updatedCart;
     });
   };

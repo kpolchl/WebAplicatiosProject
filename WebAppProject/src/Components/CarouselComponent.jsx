@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import ExampleCarouselImage from './ExampleCarouselImage';  // Import komponentu
+import ExampleCarouselImage from './ExampleCarouselImage';  
 
 function CarouselComponent() {
   return (
