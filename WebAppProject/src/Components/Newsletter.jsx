@@ -1,7 +1,13 @@
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 function NewsletterComponent() {
+  const handleSubmit = (event) => {
+    event.preventDefault(); 
+    alert("Zapisano do newslettera!");
+  };
+
   return (
     <div style={{
       display: "flex",
@@ -17,7 +23,7 @@ function NewsletterComponent() {
         borderRadius: "10px",
         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
       }}>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label style={{ fontSize: "1.2rem", fontWeight: "bold", color: "#333" }}>
               Zapisz się do newslettera!
