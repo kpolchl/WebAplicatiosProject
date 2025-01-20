@@ -1,7 +1,6 @@
 import ContactComponent from "../Components/ContactComponent";
 
 function Contact() {
-  // Funkcja obsługująca kliknięcie przycisku
   const handleSubmit = () => {
     alert("Wiadomość została wysłana!");
   };
@@ -12,10 +11,10 @@ function Contact() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        minHeight: "100vh", // Pełna wysokość widoku
+        minHeight: "100vh",
         backgroundColor: "#add8e6",
-        padding: "10px", // Dodanie paddingu dla wąskich ekranów
-        boxSizing: "border-box", // Uwzględnia padding w szerokości
+        padding: "10px", 
+        boxSizing: "border-box",
       }}
     >
       <div
@@ -24,9 +23,9 @@ function Contact() {
           borderRadius: "20px",
           boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
           maxWidth: "600px",
-          width: "100%", // Elastyczna szerokość dla responsywności
+          width: "100%",
           padding: "20px",
-          boxSizing: "border-box", // Zapobiega obcinaniu krawędzi
+          boxSizing: "border-box",
         }}
       >
         <h1 style={{ textAlign: "center", marginBottom: "20px" }}>
@@ -36,7 +35,7 @@ function Contact() {
         <div style={{ textAlign: "center", marginTop: "20px" }}>
           <button
             type="button"
-            onClick={handleSubmit} // Wywołanie funkcji obsługującej kliknięcie
+            onClick={handleSubmit}
             style={{
               backgroundColor: "#007bff",
               color: "white",
@@ -45,9 +44,9 @@ function Contact() {
               padding: "10px 20px",
               fontSize: "16px",
               cursor: "pointer",
-              width: "100%", // Przycisk zajmuje pełną szerokość
-              maxWidth: "200px", // Maksymalna szerokość dla estetyki
-              margin: "0 auto", // Wyśrodkowanie przycisku
+              width: "100%", 
+              maxWidth: "200px", 
+              margin: "0 auto",
             }}
           >
             Wyślij

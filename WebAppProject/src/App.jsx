@@ -11,7 +11,9 @@ import LoginPage from './Pages/LoginPage';
 import ProductPage from './Pages/ProductPage';
 import { CartProvider } from './Context/CartContext';
 import { ProductProvider } from './Context/ProductContext';
+import NewsletterComponent from './Components/Newsletter';
 import RegisterPage from "./Pages/RegisterPage.jsx";
+
 
 function App() {
   return (
@@ -29,6 +31,7 @@ function App() {
             <Route path="/product/:title" element={<ProductPage />} />
             <Route path="/register" element={<RegisterPage/>}/>
           </Routes>
+          <NewsletterComponent/>
         </BrowserRouter>
       </CartProvider>
     </ProductProvider>
