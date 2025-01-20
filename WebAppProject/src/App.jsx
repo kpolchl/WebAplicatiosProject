@@ -12,6 +12,8 @@ import ProductPage from './Pages/ProductPage';
 import { CartProvider } from './Context/CartContext';
 import { ProductProvider } from './Context/ProductContext';
 import NewsletterComponent from './Components/Newsletter';
+import RegisterPage from "./Pages/RegisterPage.jsx";
+
 
 function App() {
   return (
@@ -27,6 +29,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/loginpage" element={<LoginPage />} />
             <Route path="/product/:title" element={<ProductPage />} />
+            <Route path="/register" element={<RegisterPage/>}/>
           </Routes>
           <NewsletterComponent/>
         </BrowserRouter>

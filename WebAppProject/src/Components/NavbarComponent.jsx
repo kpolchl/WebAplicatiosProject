@@ -50,7 +50,8 @@ function NavbarComponent() {
               <NavDropdown.Item as={Link} to="/myaccount">Moje Konto</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/cart">Mój Koszyk</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} to="/loginpage">Zaloguj się (Zarejestruj się)</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/loginpage">Zaloguj się</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/register">Zarejestruj się</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Form className="d-flex" onSubmit={handleSearch}>

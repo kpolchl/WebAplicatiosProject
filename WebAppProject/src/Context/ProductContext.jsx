@@ -1,38 +1,26 @@
-// ProductProvider.js - Nowy kontekst dla produktów
-import React, { createContext, useState, useContext, useEffect } from 'react';
+import React, { createContext, useState, useContext, useEffect } from "react";
+import axios from "axios";
 
 const ProductContext = createContext();
 
 export const useProducts = () => useContext(ProductContext);
 
 export const ProductProvider = ({ children }) => {
-  const [products, setProducts] = useState(() => {
-    const savedProducts = localStorage.getItem('products');
-    return savedProducts ? JSON.parse(savedProducts) : [];
-  });
+  const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    if (products.length === 0) {
-      fetchProducts();
-    }
-  }, []);
-
+  // pobierz produkty z bazy
   const fetchProducts = async () => {
     try {
-      const response = await fetch('https://fakestoreapi.com/products');
-      const data = await response.json();
-
-      const productsWithRating = data.map(product => ({
-        ...product,
-        rating: Math.floor(Math.random() * 5) + 1, // Dodanie losowego ratingu
-      }));
-
-      localStorage.setItem('products', JSON.stringify(productsWithRating));
-      setProducts(productsWithRating);
+      const response = await axios.get("http://localhost:3000/products");
+      setProducts(response.data);
     } catch (error) {
-      console.error('Error fetching products:', error);
+      console.error("Error fetching products:", error);
     }
   };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
 
   return (
     <ProductContext.Provider value={{ products, setProducts }}>
