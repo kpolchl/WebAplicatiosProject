@@ -52,6 +52,9 @@ function NavbarComponent() {
               <NavDropdown.Divider />
               <NavDropdown.Item as={Link} to="/loginpage">Zaloguj się</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/register">Zarejestruj się</NavDropdown.Item>
+              <NavDropdown.Item onClick={() => {localStorage.setItem("user", "");
+                window.location.reload();
+              }}>wyloguj</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Form className="d-flex" onSubmit={handleSearch}>

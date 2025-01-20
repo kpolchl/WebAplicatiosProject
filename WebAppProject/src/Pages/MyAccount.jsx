@@ -33,14 +33,14 @@ function MyAccount() {
   if (!user) {
     return (
       <Container className="text-center mt-5">
-        <h2>Loading user profile...</h2>
+        <h2>Zaloguj sie by zobaczyć twoje konto</h2>
       </Container>
     );
   }
 
   return (
     <Container className="d-flex flex-column align-items-start mt-5">
-      {/* User Profile Card */}
+     
       <Card style={{ width: "100%", borderRadius: "15px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)" }}>
         <Card.Body className="text-left">
           <Row>
