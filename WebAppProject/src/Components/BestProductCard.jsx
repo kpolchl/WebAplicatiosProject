@@ -17,7 +17,7 @@ function BestProductCard({ image, title, category, price, rating }) {
           }} />
       </div>
       <Card.Body>
-        <div style={{height: "30px", marginBottom: "40px"}}>
+        <div style={{height: "50px", marginBottom: "40px"}}>
             <Card.Title><strong>{title}</strong></Card.Title>
         </div>
         <div >
