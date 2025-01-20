@@ -11,6 +11,7 @@ import LoginPage from './Pages/LoginPage';
 import ProductPage from './Pages/ProductPage';
 import { CartProvider } from './Context/CartContext';
 import { ProductProvider } from './Context/ProductContext';
+import NewsletterComponent from './Components/Newsletter';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/loginpage" element={<LoginPage />} />
             <Route path="/product/:title" element={<ProductPage />} />
           </Routes>
+          <NewsletterComponent/>
         </BrowserRouter>
       </CartProvider>
     </ProductProvider>
