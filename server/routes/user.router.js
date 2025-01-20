@@ -1,8 +1,6 @@
 const express = require("express");
-const User = require("../models/user.model.js");
 const router = require("express").Router();
-const {getUsers,getUser ,createUser, updateUserData, deleteUser} = require("../controllers/user.controller.js");
-const {addPurchase} = require("../controllers/user.controller");
+const {getUsers,getUser ,createUser, updateUserData, deleteUser ,addPurchase} = require("../controllers/user.controller.js");
 
 router.get("/" ,getUsers);
 

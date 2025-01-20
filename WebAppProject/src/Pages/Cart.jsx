@@ -1,9 +1,20 @@
 import 'react'; 
 import { useCart } from '../Context/CartContext';
+import axios from "axios";
+import {useEffect, useState} from "react";
 // import '../StyleSheets/cart.css';
 
 function Cart() {
   const { cart, setCart } = useCart(); // Pobranie koszyka i funkcji do aktualizacji koszyka
+  const [userId, setUserId] = useState('');
+
+  useEffect(() => {
+    let getUser = localStorage.getItem("user");
+    if (getUser) {
+      const parsedUser = JSON.parse(getUser);
+      setUserId(parsedUser._id); // Set the user ID to state
+    }
+  },[])
 
   const handleRemoveFromCart = (productToRemove) => {
     const updatedCart = cart.filter((product) => product !== productToRemove);
@@ -16,6 +27,27 @@ function Cart() {
   const calculateTotal = () => {
     return cart.reduce((total, product) => total + product.price, 0).toFixed(2);
   };
+
+  const handleOrder = () => {
+
+    const cartItems = cart.map(item => item.title);
+    let price = calculateTotal();
+    if(price ==0.00){
+      alert("dodaj coś do swojego koszyka")
+      return;
+    }
+
+    axios.post("http://localhost:3000/orders/cart",{
+      userId: userId,
+      orderContents: cartItems,
+      value: price,
+    });
+
+    alert("zamówienie złożone")
+
+    setCart([]);
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
 
   return (
     <div style={{ margin: "80px 50px", display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
@@ -91,8 +123,8 @@ function Cart() {
         }}
       >
         <h2>Podsumowanie</h2>
-        <p><strong>Łączna wartość:</strong> {calculateTotal()} zł</p>
-        <button
+        <p><strong>Łączna wartość:</strong> {calculateTotal()} $</p>
+        <button onClick={handleOrder}
           style={{
             backgroundColor: 'green',
             color: 'white',

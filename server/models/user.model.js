@@ -1,24 +1,36 @@
-const mongoose = require("mongoose");
+const bcrypt  = require("bcrypt");
+const mongoose  = require("mongoose");
+const jwt = require("jsonwebtoken");
 
 const UserSchema = new mongoose.Schema(
   {
-    name: { type: String, required: true },
-    surname: { type: String, required: true },
+    first_name: {
+      type: String,
+      required: "Your firstname is required",
+      max: 25,
+    },
+    last_name: {
+      type: String,
+      required: "Your lastname is required",
+      max: 25,
+    },
     email: {
       type: String,
-      required: true,
+      required: "Your email is required",
       unique: true,
-      match: [/.+@.+\..+/, "Please enter a valid email address"],
+      lowercase: true,
+      trim: true,
     },
-    password: { type: String, required: true },
-    profilePic: { type: String, default: "default-profile-pic-url.jpg" },
-    PurchaseHistory: [
-      {
-        productId: { type: mongoose.Schema.Types.ObjectId, ref: "Product", required: true },
-        name: { type: String, required: true },
-        purchaseDate: { type: Date, required: true, default: Date.now },
-      },
-    ],
+    password: {
+      type: String,
+      required: "Your password is required",
+      max: 25,
+    },
+    role: {
+      type: String,
+      required: true,
+      default: "user",
+    },
   },
   { timestamps: true },
 );

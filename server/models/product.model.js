@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const ProductSchema = new mongoose.Schema(
+const orderHistorychema = new mongoose.Schema(
   {
     title: { type: String, required: true },
     category: { type: String, required: true },
@@ -12,6 +12,6 @@ const ProductSchema = new mongoose.Schema(
   { timestamps: true },
 );
 
-const Product = mongoose.model("Product", ProductSchema);
+const Product = mongoose.model("Product", orderHistorychema);
 
 module.exports = Product;

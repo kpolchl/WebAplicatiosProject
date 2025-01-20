@@ -3,19 +3,22 @@ const mongoose = require("mongoose");
 const Product = require("./models/product.model.js");
 const ProductRoute = require("./routes/product.router.js");
 const UserRoute = require("./routes/user.router.js");
+const OrderRoute = require("./routes/orderhistroy.router.js");
 const cors = require("cors");
 const corsOptions = {
   origin: "http://localhost:5173",
-}
+};
 
 const app = express();
 app.use(express.json());
 
 app.use(cors(corsOptions));
 
-app.use("/api/products" , ProductRoute);
+app.use("/products", ProductRoute);
 
-app.use("/api/users", UserRoute);
+app.use("/users", UserRoute);
+
+app.use("/orders", OrderRoute);
 
 mongoose
   .connect(
@@ -30,3 +33,4 @@ mongoose
   .catch(() => {
     console.log("Connection Error: ");
   });
+

@@ -12,12 +12,13 @@ const RegisterPage = () => {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:3000/api/users/register', {
-      name: name,
-      surname: surname,
+    axios.post('http://localhost:3000/users/register', {
+      first_name: name,
+      last_name: surname,
       email: email,
       password: password,
     })
+    alert("zalogowano")
     navigate('/');
   };
 
