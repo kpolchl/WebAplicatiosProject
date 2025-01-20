@@ -4,8 +4,10 @@ import ExampleCarouselImage from './ExampleCarouselImage';  // Import komponentu
 
 function CarouselComponent() {
   return (
-    <div style={{ backgroundColor: "rgba(63, 143, 189, 0.5)" }}>
-      <div className="carousel-container">
+    <div style={{ backgroundColor: "rgba(63, 143, 189, 0.5)", 
+      justifyContent: "center",  
+      alignItems: "center", }}>
+      <div className="carousel-container" >
         <Carousel>
           <Carousel.Item>
             <ExampleCarouselImage 
@@ -43,6 +45,7 @@ function CarouselComponent() {
           </Carousel.Item>
         </Carousel>
       </div>
+      
     </div>
   );
 }

@@ -2,13 +2,18 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 function NewsletterComponent() {
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Zapobiega odświeżaniu strony
+    alert('Zapisano do newslettera!'); // Wyświetla alert
+  };
+
   return (
     <div style={{
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
       height: "40vh",
-      backgroundColor: "rgba(31, 45, 54, 0.3)",
+      backgroundColor: "rgba(36, 71, 99, 0.2)",
     }}>
       <div style={{
         width: "400px",
@@ -17,7 +22,7 @@ function NewsletterComponent() {
         borderRadius: "10px",
         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
       }}>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label style={{ fontSize: "1.2rem", fontWeight: "bold", color: "#333" }}>
               Zapisz się do newslettera!

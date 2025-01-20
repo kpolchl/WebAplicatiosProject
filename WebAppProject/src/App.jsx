@@ -31,7 +31,6 @@ function App() {
             <Route path="/product/:title" element={<ProductPage />} />
             <Route path="/register" element={<RegisterPage/>}/>
           </Routes>
-          <NewsletterComponent/>
         </BrowserRouter>
       </CartProvider>
     </ProductProvider>

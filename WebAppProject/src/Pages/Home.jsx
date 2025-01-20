@@ -3,6 +3,7 @@ import CarouselComponent from '../Components/CarouselComponent';
 import BestProductCard from '../Components/BestProductCard';
 import { useProducts } from '../Context/ProductContext';
 import '../StyleSheets/Home.css'
+import NewsletterComponent from '../Components/Newsletter';
 
 function Home() {
   const { products } = useProducts();
@@ -29,6 +30,7 @@ function Home() {
           ))}
         </div>
       </div>
+      <NewsletterComponent/>
     </>
   );
 }

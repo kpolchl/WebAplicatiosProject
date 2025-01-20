@@ -13,7 +13,6 @@ function Contact() {
         alignItems: "center",
         minHeight: "100vh",
         backgroundColor: "#add8e6",
-        padding: "10px", 
         boxSizing: "border-box",
       }}
     >
@@ -26,6 +25,7 @@ function Contact() {
           width: "100%",
           padding: "20px",
           boxSizing: "border-box",
+          margin: "0px 30px"
         }}
       >
         <h1 style={{ textAlign: "center", marginBottom: "20px" }}>
