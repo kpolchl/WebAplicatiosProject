@@ -26,13 +26,13 @@ const RegisterPage = () => {
     <Container className="mt-5">
       <Row className="justify-content-center">
         <Col md={6}>
-          <h2 className="text-center mb-4">Register</h2>
+          <h2 className="text-center mb-4">Rejestracja</h2>
           <Form onSubmit={handleRegister}>
             <Form.Group className="mb-3" controlId="formBasicName">
-              <Form.Label>Name</Form.Label>
+              <Form.Label>Imię</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Enter your name"
+                placeholder="Wprowadź imię"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
@@ -40,10 +40,10 @@ const RegisterPage = () => {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicSurname">
-              <Form.Label>Surname</Form.Label>
+              <Form.Label>Nazwisko</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Enter your surname"
+                placeholder="Wprowadź nazwisko"
                 value={surname}
                 onChange={(e) => setSurname(e.target.value)}
                 required
@@ -51,10 +51,10 @@ const RegisterPage = () => {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label>Adres email</Form.Label>
               <Form.Control
                 type="email"
-                placeholder="Enter your email"
+                placeholder="Wprowadź email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -62,10 +62,10 @@ const RegisterPage = () => {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
+              <Form.Label>Hasło</Form.Label>
               <Form.Control
                 type="password"
-                placeholder="Enter your password"
+                placeholder="Wprowadź hasło"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
@@ -73,7 +73,7 @@ const RegisterPage = () => {
             </Form.Group>
 
             <Button variant="primary" type="submit" className="w-100">
-              Register
+              Zarejestruj
             </Button>
           </Form>
         </Col>
