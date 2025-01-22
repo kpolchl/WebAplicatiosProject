@@ -21,8 +21,8 @@ app.use("/users", UserRoute);
 app.use("/orders", OrderRoute);
 
 mongoose
-  .connect(
-    "mongodb+srv://admin:admin@backeenddb.yqvmi.mongodb.net/?retryWrites=true&w=majority&appName=BackeendDB",
+  .connect( // url to database temporarly deleted due to public status of repo
+    ,
   )
   .then(() => {
     console.log("Connected to the Database!");
